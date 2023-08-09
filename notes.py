@@ -41,25 +41,25 @@ class Note:
         # returnjls_extract_var
     
 
-@classmethod
+    @classmethod
 
-def from_dict(clcs, d):
+    def from_dict(cls, d):
 
-    return cls(
+        return cls(
 
-        id= d["id"],
+            id= d["id"],
 
-        title= d["title"],
+            title= d["title"],
 
-        body= d["body"],
+            body= d["body"],
 
-        creation_time= datetime.fromisoformat(d["creation_time"])
-    )
+            creation_time= datetime.fromisoformat(d["creation_time"])
+        )
 
 
-def __repr__(self):
+    def __repr__(self):
 
-    return f"<Note {self.title} ({self.id})>"
+        return f"<Note {self.title} ({self.id})>"
 
 def load_notes():
 
